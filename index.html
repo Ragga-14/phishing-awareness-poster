@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Think Before You Click | Phishing Awareness Poster</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero">
+  <button id="themeToggle" class="theme-btn" aria-label="Toggle dark or light mode">Toggle theme</button>
+  <p class="tag">CYBERSECURITY AWARENESS</p>
+  <h1>Think Before You <span class="hook">Click</span></h1>
+  <p class="sub">Phishing is the #1 way attackers get into organizations. One click can expose everyone's data.</p>
+  <!-- Optional image: assets/hero-phishing-hook.png -->
+  <img src="assets/hero-phishing-hook.png" alt="" class="hero-img" onerror="this.style.display='none'">
+</header>
+
+<main>
+
+  <!-- SECTION 1: What is phishing -->
+  <section class="card" id="what">
+    <h2>1. What is phishing?</h2>
+    <p>Phishing is a social engineering attack where a criminal pretends to be someone you trust (your bank, IT department, boss, or a delivery company) to trick you into clicking a malicious link, opening an attachment, or giving away passwords and data.</p>
+    <div class="types">
+      <div class="chip">Email phishing</div>
+      <div class="chip">Spear phishing (targeted)</div>
+      <div class="chip">Smishing (SMS)</div>
+      <div class="chip">Vishing (voice calls)</div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: How the attack works -->
+  <section class="card" id="how">
+    <h2>2. How the attack works</h2>
+    <ol class="steps">
+      <li><span>1</span><b>Bait:</b> attacker sends a convincing message.</li>
+      <li><span>2</span><b>Pressure:</b> urgency or fear ("Your account will be closed!").</li>
+      <li><span>3</span><b>Click:</b> victim opens a fake link or attachment.</li>
+      <li><span>4</span><b>Steal:</b> credentials or malware are captured.</li>
+      <li><span>5</span><b>Breach:</b> attacker enters the organization's network.</li>
+    </ol>
+  </section>
+
+  <!-- SECTION 3: Interactive email -->
+  <section class="card" id="spot">
+    <h2>3. Spot the red flags <small>(click the highlighted parts)</small></h2>
+    <div class="email">
+      <div class="email-head">
+        <div><b>From:</b> <button class="flag" data-msg="Sender domain is fake: 'paypa1-support.com' uses a number 1 instead of the letter l.">security@paypa1-support.com</button></div>
+        <div><b>Subject:</b> <button class="flag" data-msg="Urgency and threats are classic pressure tactics.">URGENT: Account suspended in 24 hours!</button></div>
+      </div>
+      <div class="email-body">
+        <p><button class="flag" data-msg="Generic greeting. Real companies use your name.">Dear Customer,</button></p>
+        <p>We noticed unusual activity. <button class="flag" data-msg="Hover before you click! The real destination is different from the text shown.">Click here to verify your account</button> or it will be permanently closed.</p>
+        <p><button class="flag" data-msg="Unexpected attachments (especially .zip/.exe/.docm) can carry malware.">Invoice_8842.zip</button></p>
+        <p>Regards,<br>Security Team <button class="flag" data-msg="Spelling and grammar mistakes are common in phishing emails.">Pay-Pal Servces</button></p>
+      </div>
+    </div>
+    <div id="flagOutput" class="flag-output">Click a highlighted part to learn why it is suspicious.</div>
+    <div class="progress"><div id="flagBar"></div></div>
+    <p id="flagCount" class="small">0 of 6 red flags found</p>
+  </section>
+
+  <!-- SECTION 4: How to avoid -->
+  <section class="card" id="avoid">
+    <h2>4. How to protect yourself</h2>
+    <div class="grid">
+      <div class="tip"><h3>STOP</h3><p>Pause. Does it create urgency or ask for sensitive info?</p></div>
+      <div class="tip"><h3>CHECK</h3><p>Verify the sender address and hover over links before clicking.</p></div>
+      <div class="tip"><h3>VERIFY</h3><p>Contact the sender using a known number or official website.</p></div>
+      <div class="tip"><h3>REPORT</h3><p>Forward to IT/security and delete. Never reply.</p></div>
+      <div class="tip"><h3>ENABLE MFA</h3><p>Multi-factor authentication limits damage if a password leaks.</p></div>
+      <div class="tip"><h3>UPDATE</h3><p>Keep your system, browser and antivirus up to date.</p></div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: Quiz -->
+  <section class="card" id="quiz">
+    <h2>5. Quick quiz</h2>
+    <div id="quizBox"></div>
+  </section>
+
+  <!-- SECTION 6: Placement -->
+  <section class="card" id="placement">
+    <h2>6. Where to display this poster</h2>
+    <p class="small">Click a location to see why it works.</p>
+    <div class="places">
+      <button class="place" data-why="Employees check email here first thing. Shows the poster at the moment of highest phishing risk.">IT / Open-plan office desks</button>
+      <button class="place" data-why="People wait here with phones in hand, ideal for catching smishing and email habits.">Break room / Cafeteria</button>
+      <button class="place" data-why="Staff pause by lifts, giving time to read. Great for visitors and new staff too.">Lift lobbies &amp; corridors</button>
+      <button class="place" data-why="New employees get security awareness from day one.">HR / Onboarding &amp; Training rooms</button>
+      <button class="place" data-why="Finance and admin staff are top spear-phishing targets (fake invoices, CEO fraud).">Finance &amp; Admin departments</button>
+      <button class="place" data-why="Reception sees visitors and deliveries, and is a target for vishing calls.">Reception area</button>
+    </div>
+    <div id="placeOutput" class="flag-output">Select a location.</div>
+  </section>
+
+</main>
+
+<footer>
+  <p><b>Suspect phishing?</b> Do not click. Report it to <b>IT Security</b> at <i>arungaalbert@gmail.com</i> or call: 0791539312.</p>
+  <p class="small">Poster by Albert Arunga | Cybersecurity Awareness</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
